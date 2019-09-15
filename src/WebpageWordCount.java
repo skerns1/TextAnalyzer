@@ -1,14 +1,15 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class WebpageWordCount {
 
 	//String of URL to pull HTML file for Text Analyzer List and WordCount Map of word and frequency
 	private String URL;
-	private Map<String, Integer> WordCount = new HashMap<String, Integer>();
+	private HashMap<String, Integer> WordCount = new LinkedHashMap<String, Integer>();
 
 	//Default Constructor
-	public WebpageWordCount(String uRL, Map<String, Integer> wordCount) {
+	public WebpageWordCount(String uRL, HashMap<String, Integer> wordCount) {
 		super();
 		URL = uRL;
 		setWordCount(wordCount);
@@ -24,7 +25,7 @@ public class WebpageWordCount {
 	public Map<String, Integer> getWordCount() {
 		return WordCount;
 	}//end getWordCount
-	public void setWordCount(Map<String, Integer> wordCount) {
+	public void setWordCount(HashMap<String, Integer> wordCount) {
 		WordCount = wordCount;
 	}//end setWordCount
 	
